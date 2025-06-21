@@ -9,9 +9,26 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="add_books">
-        <button>Add Book</button>
-        <button>See all the Books</button>
+    <div id="add_books_class">
+        <button id="add_books">Add Book</button>
+    </div>
+
+    <form action="post" id="bookForm" style="display: none;">
+        <div class="author_name">
+            <label for="author">author</label>
+            <input type="author" name="author" id="author" required>
+        </div>
+
+        <div class="book_title">
+            <label for="title">title</label>
+            <input type="title" name="title" id="title" required>
+        </div>
+
+        <button type="submit" class="submit"> submit </button>
+    </form>
+
+    <div class="all_books">
+
     </div>
 </body>
 </html>

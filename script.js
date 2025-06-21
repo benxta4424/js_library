@@ -13,6 +13,24 @@ function addBookToLibrary(author, title) {
 }
 
 
-const book1 = addBookToLibrary("ben","tennyeson")
+const book1 = addBookToLibrary("ben","tun")
+const book2 = addBookToLibrary("dan","sah")
+const book3 = addBookToLibrary("darius","hur")
+const book4 = addBookToLibrary("daniel","grr")
 
-console.log(book1.title)
+
+function getBook() {
+    for(let i = 0; i < myLibrary.length; i++) {
+        document.getElementById("bookTitle").innerHTML = myLibrary[i].name
+    }
+}
+
+
+
+// form for adding the book 
+const addBookButton = document.getElementById("add_books");
+const bookForm = document.getElementById("bookForm")
+
+addBookButton.addEventListener("click", ()=> {
+    bookForm.style.display = "block";
+})
