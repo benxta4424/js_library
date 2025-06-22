@@ -12,17 +12,10 @@ function addBookToLibrary(author, title) {
     return new_book;
 }
 
-function getBook() {
-    for(let i = 0; i < myLibrary.length; i++) {
-        console.log(myLibrary[i].name)
-    }
-}
-
-
-
 // form for adding the book 
 const addBookButton = document.getElementById("add_books");
 const bookForm = document.getElementById("bookForm")
+
 
 addBookButton.addEventListener("click", ()=> {
     bookForm.style.display = "block"
@@ -34,13 +27,15 @@ function appendBookToDom(dynamic_book) {
     const createBox = document.createElement("div")
     createBox.className = "box"
 
+    //creating a span for the book and author
     const title = document.createElement('span')
     title.className = "title_box"
-    title.textContent = dynamic_book.title
+    title.textContent = `${dynamic_book.title}`
 
+    //the span for the author (i arranged them in reverse order but its okay it still works)
     const author = document.createElement("span")
     author.className = "author_box"
-    author.textContent = dynamic_book.author
+    author.textContent = `${dynamic_book.author}`
 
     createBox.appendChild(author)
     createBox.appendChild(title)
@@ -60,3 +55,16 @@ bookForm.addEventListener("submit", (e) => {
     appendBookToDom(dynamically_added_book)
 })
 
+
+
+
+// seeding the site with some books for styling purposes
+bookOne = new Book("Rachael Lippincott","Five Feet Apart")
+bookTwo = new Book("Harper Lee", "To Kill a Mockingbird")
+bookThree = new Book("George Orwell", "1984")
+bookFour = new Book("J.K. Rowling", "Harry Potter and the Sorcerer's Stone")
+bookFive = new Book("F. Scott Fitzgerald", "The Great Gatsby")
+
+myLibrary.push(bookOne, bookTwo, bookThree, bookFour, bookFive)
+
+myLibrary.forEach(appendBookToDom)
