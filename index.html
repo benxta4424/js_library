@@ -2,31 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Book Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to external files -->
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./stylesheet.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <div id="add_books_class">
-            <button id="add_books">Add Book</button>
+        
+        <div class="miniContainer">
+        <!-- Button to show the form -->
+            <div id="add_books_class">
+                <button id="add_books">Add Book</button>
+            </div>
+
+            <!-- Form to add a new book -->
+            <form action="" method="post" id="bookForm" class="hidden_form">
+                <div class="author_name">
+                    <label for="author">Author</label>
+                    <input 
+                        type="text" 
+                        name="author" 
+                        id="author" 
+                        class="book_input" 
+                        placeholder="Enter author's name" 
+                        required>
+                </div>
+
+                <div class="book_title">
+                    <label for="title">Title</label>
+                    <input 
+                        type="text" 
+                        name="title" 
+                        id="title" 
+                        class="book_input" 
+                        placeholder="Enter book title" 
+                        required>
+                </div>
+
+                <button type="submit" class="submit">Submit</button>
+            </form>
         </div>
 
-        <form action="" method="post" id="bookForm" style="display: none;">
-            <div class="author_name">
-                <label for="author">author</label>
-                <input type="author" name="author" id="author" required>
-            </div>
-
-            <div class="book_title">
-                <label for="title">title</label>
-                <input type="title" name="title" id="title" required>
-            </div>
-
-            <button type="submit" class="submit"> submit </button>
-        </form>
-
+        <!-- Where all books will be displayed -->
         <div id="all_books"></div>
     </div>
 </body>

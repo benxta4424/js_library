@@ -16,11 +16,9 @@ function addBookToLibrary(author, title) {
 const addBookButton = document.getElementById("add_books");
 const bookForm = document.getElementById("bookForm")
 
-
 addBookButton.addEventListener("click", ()=> {
-    bookForm.style.display = "block"
+    bookForm.classList.add("show");
 })
-
 
 function appendBookToDom(dynamic_book) {
     // create the box for the title and author and name it box
@@ -54,9 +52,11 @@ bookForm.addEventListener("submit", (e) => {
 
     const author = document.getElementById("author").value
     const title = document.getElementById("title").value
-
+    // Change the font size of the add book button
     const dynamically_added_book = addBookToLibrary(author, title)
     appendBookToDom(dynamically_added_book)
+    
+    bookForm.reset();
 })
 
 function deleteButton(box_name, buttonId) {
@@ -70,8 +70,6 @@ function deleteButton(box_name, buttonId) {
 
     box_name.appendChild(deleteButton)
 }
-
-
 
 // seeding the site with some books for styling purposes
 bookOne = new Book("Rachael Lippincott","Five Feet Apart")
