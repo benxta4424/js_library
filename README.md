@@ -2,17 +2,17 @@
 
 A lightweight, interactive JavaScript library demo using only **HTML**, **CSS**, and **Vanilla JS**. This project showcases how to build dynamic, animated, and responsive components without relying on external libraries or frameworks.
 
-> Ideal for beginners learning the DOM, events, and browser rendering—or anyone looking for a quick interactive UI template.
+Ideal for beginners learning the DOM, events, and browser rendering—or anyone looking for a quick interactive UI template.
 
 ---
 
 ## 🌟 Features
 
-- ✅ Fully responsive layout
-- 🎯 DOM manipulation via JavaScript
-- ✨ Smooth CSS transitions & effects
-- 🖱️ Click & hover interactivity
-- 🧠 No dependencies – 100% vanilla JS
+- Fully responsive layout
+- DOM manipulation via JavaScript
+- Smooth CSS transitions & effects
+- Click & hover interactivity
+- No dependencies – 100% vanilla JS
 
 ---
 ## 📷 Preview
