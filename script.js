@@ -39,6 +39,10 @@ function appendBookToDom(dynamic_book) {
 
     createBox.appendChild(author)
     createBox.appendChild(title)
+    
+    // we also need a button for deleting the book
+    deleteButton(createBox, dynamic_book.id)
+
 
     // append the books to the container
     const bookContainer = document.getElementById("all_books")    
@@ -55,6 +59,17 @@ bookForm.addEventListener("submit", (e) => {
     appendBookToDom(dynamically_added_book)
 })
 
+function deleteButton(box_name, buttonId) {
+    const deleteButton = document.createElement("button")
+    deleteButton.className = "delete_button"
+    deleteButton.innerText = "Delete"
+
+    deleteButton.addEventListener("click", () => {
+        box_name.remove()
+    })
+
+    box_name.appendChild(deleteButton)
+}
 
 
 
